@@ -590,7 +590,7 @@ h2.trendings-title {
      margin-bottom: 10px;
      left: 30px;
      right: 30px;
-     border-bottom: 2px solid var(--cool-gray);
+     border-bottom: 2px solid var(--marine-blue);
 }
 
 h3.maintain-title,
@@ -604,7 +604,7 @@ p.share-info,
 p.privacy-info {
      text-align: justify;
      font-size: 1.3em;
-     color: var(--cool-gray);
+     color: #1d1b31;
      padding: 10px;
 }
 
@@ -623,8 +623,7 @@ p.privacy-info {
 }
 
 /* ***** MEDIA QUERIES ******** */
-
-@media screen and (max-width:575.98px) {
+@media screen and (min-width:450.98px) {
      .side-nav {
           position: fixed;
           top: 0;
@@ -637,7 +636,34 @@ p.privacy-info {
      }
 
      .main-top-label {
-          gap: 3rem;
+          gap: 1rem;
+     }
+
+     .main-header {
+          position: fixed;
+          top: 0;
+          width: 100%;
+          padding: 1.5rem;
+          z-index: 99;
+          background: var(--header-bg);
+          box-shadow: 0 5px 5px rgba(0, 0, 0, 0.4);
+     }
+}
+
+@media screen and (max-width:450.98px) {
+     .side-nav {
+          position: fixed;
+          top: 0;
+          left: 0;
+          height: 100vh;
+          width: 80px;
+          background: var(--background-01);
+          padding: 0.5em 1em;
+          transition: all 1s ease;
+     }
+
+     .main-top-label {
+          gap: 0;
      }
 
      .main-header {
@@ -664,7 +690,7 @@ p.privacy-info {
      }
 
      .main-top-label {
-          gap: 3rem;
+          gap: 5rem;
      }
 
      .main-header {
@@ -779,7 +805,7 @@ p.privacy-info {
      }
 
      .main-top-label {
-          gap: 17rem;
+          gap: 20rem;
      }
 
      .sub-01 input {
