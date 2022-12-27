@@ -244,8 +244,7 @@ form .field.valid {
      opacity: 1;
 }
 
-
-@media screen and (max-width:325px) {
+@media screen and (max-width:375px) {
      .alert {
           font-size: 2px;
      }
