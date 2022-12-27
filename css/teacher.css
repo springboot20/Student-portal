@@ -1,0 +1,226 @@
+* {
+     padding: 0;
+     margin: 0;
+     box-sizing: border-box;
+}
+
+:root {
+     --btn-shadow: 2px 2px 5px rgba(0, 0, 0, 0.4),
+          -2px -2px 5px rgba(0, 0, 0, 0.4);
+     --card-backgroud: #fff;
+     --card-color: rgba(24, 18, 18, 0.967);
+     --img-shadow: 1px 1px 5px rgba(0, 0, 0, 0.4),
+          -1px -1px 5px rgba(0, 0, 0, 0.4);
+     --card-shadow: 0 0 6px rgba(0, 0, 0, .4);
+
+     --cool-gray: hsl(231, 11%, 63%);
+     --light-gray: hsl(229, 24%, 87%);
+}
+
+[data-theme="dark"] {
+     --btn-shadow: 2px 2px 5px rgba(255, 255, 255, 0.4),
+          -2px -2px 5px rgba(255, 255, 255, 0.4);
+     --card-backgroud: transparent;
+     --card-color: #fff;
+     --img-shadow: 2px 2px 5px rgba(255, 255, 255, 0.4),
+          -2px -2px 5px rgba(255, 255, 255, 0.4);
+     --card-shadow: 0 0 6px rgba(255, 255, 255, 0.4)
+}
+
+.main-teacher-container {
+     display: grid;
+     margin-top: 2em;
+     gap: 1rem;
+     grid-template-columns: repeat(1, 1fr);
+     transition: all 0.5s ease;
+}
+
+#teacher-container {
+     transform: translateY(11vh);
+     padding: 1rem;
+}
+
+.teacher-card {
+     position: relative;
+     margin: 10px;
+     overflow: hidden;
+     min-width: 230px;
+     min-height: 200px;
+     padding: 2rem 1rem;
+     text-align: center;
+     border-radius: 10px;
+     color: var(--card-color);
+     box-shadow: var(--card-shadow);
+     background: var(--card-backgroud);
+}
+
+.teacher-card .card-img {
+     height: 120px;
+     width: 120px;
+     border-radius: 50%;
+     box-shadow: var(--img-shadow);
+}
+
+.teacher-card .t-card-body {
+     color: var(--card-color);
+     padding-top: 1.2em;
+     line-height: 1.8em;
+}
+
+.t-card-title {
+     font-size: 800;
+     font-size: 1.5em;
+     transition: all 1s ease;
+}
+
+.t-card-text {
+     font-weight: 700;
+     font-size: 10px;
+     transition: all 1s ease;
+}
+
+.teacher-card .t-card-btn {
+     position: absolute;
+     top: 50%;
+     transform: translateY(-50%);
+     right: -100%;
+     display: flex;
+     flex-direction: column;
+     padding-top: 1em;
+     border-radius: 1rem 0 0 1rem;
+     background: #4d45b5;
+     box-shadow: var(--card-shadow);
+     transition: all 0.6s ease;
+}
+
+.teacher-card:hover .t-card-btn {
+     right: 0;
+}
+
+.t-card-btn a {
+     text-align: center;
+     color: #fff;
+     padding: 1rem;
+     transition: all 0.3s ease-in-out;
+}
+
+.t-card-btn a:hover {
+     color: #0b083d;
+     text-shadow: 0.25rem 0 2rem rgba(255, 255, 255, 0.4);
+}
+
+
+.skeleton {
+     background: #687880;
+     background-image: linear-gradient(90deg, var(--cool-gray), rgba(255, 255, 255, 0));
+     background-size: 40px 100%;
+     background-position: left -40px top 0;
+     background-repeat: no-repeat;
+     -webkit-animation: skeleton-load 1.3s infinite ease;
+     animation: skeleton-load 1.3s infinite ease;
+}
+
+.t-card-title.skeleton {
+     height: 0.7em;
+     margin-bottom: 5px;
+     border-radius: 0.125rem;
+}
+
+
+.t-card-text.skeleton {
+     height: 1.3em;
+     margin-bottom: 5px;
+     border-radius: 0.125rem;
+}
+
+@keyframes skeleton-load {
+     to {
+          background-position: right -40px top 0;
+     }
+}
+
+@media screen and (min-width:576px) {
+     .main-teacher-container {
+          grid-template-columns: repeat(1, 1fr);
+    } 
+  
+     #teacher-container{
+          transform:translateY(5vh) ;
+
+     }
+}
+
+@media screen and (min-width:768px) {
+     .main-teacher-container {
+          grid-template-columns: repeat(2, 1fr);
+          gap: 0;
+     }
+
+     #teacher-container {
+          position: absolute;
+          transform: translateY(5vh);
+          left: 25px;
+     }
+
+     .teacher-card {
+          min-width: 20rem;
+     }
+}
+
+
+@media screen and (min-width:992px) {
+     .main-teacher-container {
+          grid-template-columns: repeat(3, 1fr);
+          gap: 0;
+     }
+
+     #teacher-container {
+          position: absolute;
+          transform: translateY(10vh);
+          left: 25px;
+     }
+
+     .teacher-card {
+          min-width: 18rem;
+     }
+}
+
+
+
+@media screen and (min-width:1200px) {
+     .main-teacher-container {
+          grid-template-columns: repeat(3, 1fr);
+          gap: 0;
+     }
+
+     #teacher-container {
+          position: absolute;
+          transform: translateY(10vh);
+          left: 25px;
+     }
+
+     .teacher-card {
+          min-width: 23rem;
+     }
+}
+
+@media screen and (min-width:1440px) {
+     .main-teacher-container {
+          grid-template-columns: repeat(4, 1fr);
+          gap: 0;
+     }
+
+     .main-top-label {
+          gap: 48rem;
+     }
+
+     #teacher-container {
+          position: absolute;
+          transform: translateY(10vh);
+          left: 25px;
+     }
+
+     .teacher-card {
+          min-width: 24rem;
+     }
+}

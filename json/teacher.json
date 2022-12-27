@@ -1,0 +1,42 @@
+[
+     {
+          "name": "Dimitres Viga",
+          "subject": "Mathematics",
+          "img": "img/people-1.jpg"
+     },
+     {
+          "name": "Tom Housenburg",
+          "subject": "Science",
+          "img": "img/people-2.jpg"
+     },
+     {
+          "name": "Diana Benovista",
+          "subject": "Art",
+          "img": "img/people-3.jpg"
+     },
+     {
+          "name": "Salvadore Marbeau",
+          "subject": "Biology",
+          "img": "img/people-4.jpg"
+     },
+     {
+          "name": "Maria Historia",
+          "subject": "History",
+          "img": "img/img-01.jpg"
+     },
+     {
+          "name": "Jack Sally",
+          "subject": "Physics",
+          "img": "img/img-02.jpg"
+     },
+     {
+          "name": "Salvadore Marbeau",
+          "subject": "Computer literacy",
+          "img": "img/img-03.jpg"
+     },
+     {
+          "name": "Salvadore Marbeau",
+          "subject": "Chemistry",
+          "img": "img/img-04.jpg"
+     }
+]
