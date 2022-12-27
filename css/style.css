@@ -245,6 +245,36 @@ form .field.valid {
 }
 
 
+@media screen and (max-width:375px) {
+     .alert {
+          font-size: 2px;
+     }
+
+     form .field {
+          width: 320px;
+     }
+
+     .field span.fa-eye,
+     .field span.fa-eye-slash {
+          padding-right: 1.2rem;
+     }
+
+     .error-notification-body {
+          width: 275px;
+     }
+
+     .notification-message,
+     .error-notification-message {
+          width: 390px;
+     }
+
+     .notification-message.active,
+     .error-notification-message.active {
+          left: 20px;
+          opacity: 1;
+     }
+}
+
 @media screen and (max-width:575px) {
      .alert {
           font-size: 2px;
