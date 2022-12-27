@@ -168,41 +168,6 @@ form .field.valid {
      border-color: #badbcc;
 }
 
-@media screen and (min-width:768px) {
-     form .field {
-          width: 450px;
-     }
-
-     form .field span.fa-eye,
-     form .field span.fa-eye-slash {
-          text-align: center;
-          padding-right: 1.2rem;
-     }
-
-     .notification-message,
-     .error-notification-message {
-          width: 400px;
-     }
-
-     .notification-body,
-     .error-notification-body {
-          width: 260px;
-     }
-
-}
-
-@media screen and (min-width:992px) {
-     form .field {
-          width: 330px;
-     }
-}
-
-@media screen and (min-width:1440px) {
-     form .field {
-          width: 450px;
-     }
-}
-
 /* ******************************* NOTIFICATON STYLING **************************/
 .notification-message,
 .error-notification-message {
@@ -291,7 +256,7 @@ form .field.valid {
 
      .field span.fa-eye,
      .field span.fa-eye-slash {
-          padding-right: 4px;
+          padding-right: 1.2rem;
      }
 
      .error-notification-body {
@@ -317,12 +282,12 @@ form .field.valid {
      }
 
      form .field {
-          width: 280px;
+          width: 320px;
      }
 
      .field span.fa-eye,
      .field span.fa-eye-slash {
-          padding-right: 4px;
+          padding-right: 1.2rem;
      }
 
      .error-notification-body {
@@ -339,5 +304,41 @@ form .field.valid {
      .error-notification-message.active {
           left: 36px;
           opacity: 1;
+     }
+}
+
+
+@media screen and (min-width:768px) {
+     form .field {
+          width: 450px;
+     }
+
+     form .field span.fa-eye,
+     form .field span.fa-eye-slash {
+          text-align: center;
+          padding-right: 1.2rem;
+     }
+
+     .notification-message,
+     .error-notification-message {
+          width: 400px;
+     }
+
+     .notification-body,
+     .error-notification-body {
+          width: 260px;
+     }
+
+}
+
+@media screen and (min-width:992px) {
+     form .field {
+          width: 330px;
+     }
+}
+
+@media screen and (min-width:1440px) {
+     form .field {
+          width: 420px;
      }
 }
