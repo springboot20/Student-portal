@@ -31,7 +31,7 @@
      display: grid;
      margin-top: 2em;
      gap: 1rem;
-     grid-template-columns: repeat(1, 1fr);
+     grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
      transition: all 0.5s ease;
 }
 
@@ -44,7 +44,7 @@
      position: relative;
      margin: 10px;
      overflow: hidden;
-     min-width: 230px;
+     min-width: 250px;
      min-height: 200px;
      padding: 2rem 1rem;
      text-align: center;
@@ -140,87 +140,55 @@
 }
 
 @media screen and (min-width:576px) {
-     .main-teacher-container {
-          grid-template-columns: repeat(1, 1fr);
-    } 
-  
-     #teacher-container{
-          transform:translateY(5vh) ;
+
+     #teacher-container {
+          transform: translateY(5vh);
 
      }
 }
 
 @media screen and (min-width:768px) {
-     .main-teacher-container {
-          grid-template-columns: repeat(2, 1fr);
-          gap: 0;
-     }
-
      #teacher-container {
           position: absolute;
           transform: translateY(5vh);
           left: 25px;
      }
 
-     .teacher-card {
-          min-width: 20rem;
-     }
 }
 
 
 @media screen and (min-width:992px) {
-     .main-teacher-container {
-          grid-template-columns: repeat(3, 1fr);
-          gap: 0;
-     }
-
      #teacher-container {
           position: absolute;
-          transform: translateY(10vh);
+          transform: translateY(8vh);
           left: 25px;
      }
-
-     .teacher-card {
-          min-width: 18rem;
-     }
 }
-
-
 
 @media screen and (min-width:1200px) {
-     .main-teacher-container {
-          grid-template-columns: repeat(3, 1fr);
-          gap: 0;
-     }
-
      #teacher-container {
           position: absolute;
-          transform: translateY(10vh);
+          transform: translateY(6vh);
           left: 25px;
      }
 
-     .teacher-card {
-          min-width: 23rem;
+     .main-teacher-container {
+          display: grid;
+          margin-top: 2em;
+          gap: 1rem;
+          grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+          transition: all 0.5s ease;
      }
 }
 
-@media screen and (min-width:1440px) {
-     .main-teacher-container {
-          grid-template-columns: repeat(4, 1fr);
-          gap: 0;
-     }
-
+@media screen and (min-width:1400px) {
      .main-top-label {
-          gap: 48rem;
+          gap: 29rem;
      }
 
      #teacher-container {
           position: absolute;
-          transform: translateY(10vh);
+          transform: translateY(6vh);
           left: 25px;
-     }
-
-     .teacher-card {
-          min-width: 24rem;
      }
 }
