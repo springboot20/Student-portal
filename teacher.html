@@ -1,190 +1,199 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link
+			rel="icon"
+			type="image/png"
+			sizes="32x32"
+			href="./img/favicon-32x32.png"
+		/>
+		<script
+			src="https://kit.fontawesome.com/643f8e5097.js"
+			crossorigin="anonymous"
+		></script>
+		<link rel="stylesheet" href="./css/dash-board.css" />
+		<link rel="stylesheet" href="./css/teacher.css" />
+		<title>Student Portal</title>
+	</head>
 
-<head>
-     <meta charset="UTF-8">
-     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-     <link rel="icon" type="image/png" sizes="32x32" href="./img/favicon-32x32.png">
-     <script src="https://kit.fontawesome.com/643f8e5097.js" crossorigin="anonymous"></script>
-     <link rel="stylesheet" href="./css/dash-board.css">
-     <link rel="stylesheet" href="./css/teacher.css">
-     <title>Student Portal</title>
-</head>
+	<body>
+		<div id="loader-wrapper">
+			<div id="loader"></div>
 
-<body>
-     <div id="loader-wrapper">
-          <div id="loader"></div>
+			<div class="loader-section section-left"></div>
+			<div class="loader-section section-right"></div>
+		</div>
 
-          <div class="loader-section section-left"></div>
-          <div class="loader-section section-right"></div>
+		<div class="website-container">
+			<nav class="side-nav">
+				<div class="nav-container">
+					<div class="logo-container">
+						<div class="logo">
+							<i class="fas fa-code"></i>
+							<span class="logo-name">Dashboard</span>
+						</div>
+						<i class="fa-solid fa-bars btn"></i>
+					</div>
 
-     </div>
+					<ul class="nav-list" id="nav-menu">
+						<li class="nav-item">
+							<a href="dashboard.html" class="nav-link l-active">
+								<i class="fas fa-home"></i>
+								<span class="link-name">Dashboard</span>
+							</a>
+							<span class="tooltip">Dashboard</span>
+						</li>
+						<li class="nav-item">
+							<a href="user.html" class="nav-link">
+								<i class="fa-solid fa-user"></i>
+								<span class="link-name">User</span>
+							</a>
+							<span class="tooltip">User</span>
+						</li>
+						<li class="nav-item">
+							<a href="teacher.html" class="nav-link">
+								<i class="fas fa-user-tie"></i>
+								<span class="link-name">Teachers</span>
+							</a>
+							<span class="tooltip">Teachers</span>
+						</li>
+						<li class="nav-item">
+							<a href="#" class="nav-link">
+								<i class="fa-solid fa-message"></i>
+								<span class="link-name">Message</span>
+							</a>
+							<span class="tooltip">Message</span>
+						</li>
+						<li class="nav-item">
+							<a href="#" class="nav-link">
+								<i class="fa-solid fa-chart-pie"></i>
+								<span class="link-name">Analytics</span>
+							</a>
+							<span class="tooltip">Analytics</span>
+						</li>
+						<li class="nav-item">
+							<a href="#" class="nav-link">
+								<i class="fa-solid fa-folder"></i>
+								<span class="link-name">File Manager</span>
+							</a>
+							<span class="tooltip">File Manager</span>
+						</li>
+						<li class="nav-item">
+							<a href="#" class="nav-link">
+								<i class="fa-solid fa-cart-shopping"></i>
+								<span class="link-name">Order</span>
+							</a>
+							<span class="tooltip">Order</span>
+						</li>
+						<li class="nav-item">
+							<a href="#" class="nav-link">
+								<i class="fa-solid fa-heart"></i>
+								<span class="link-name">Save</span>
+							</a>
+							<span class="tooltip">Save</span>
+						</li>
+						<li class="nav-item">
+							<a href="#" class="nav-link">
+								<i class="fas fa-cog"></i>
+								<span class="link-name">Settings</span>
+							</a>
+							<span class="tooltip">Settings</span>
+						</li>
+					</ul>
+				</div>
+			</nav>
 
-     <div class="website-container">
-          <nav class="side-nav">
-               <div class="nav-container">
-                    <div class="logo-container">
-                         <div class="logo">
-                              <i class="fas fa-code"></i>
-                              <span class="logo-name">Dashboard</span>
-                         </div>
-                         <i class="fa-solid fa-bars btn"></i>
-                    </div>
-
-                    <ul class="nav-list" id="nav-menu">
-                         <li class="nav-item">
-                              <a href="dashboard.html" class="nav-link l-active">
-                                   <i class="fas fa-home"></i>
-                                   <span class="link-name">Dashboard</span>
-                              </a>
-                              <span class="tooltip">Dashboard</span>
-                         </li>
-                         <li class="nav-item">
-                              <a href="user.html" class="nav-link">
-                                   <i class="fa-solid fa-user"></i>
-                                   <span class="link-name">User</span>
-                              </a>
-                              <span class="tooltip">User</span>
-                         </li>
-                         <li class="nav-item">
-                              <a href="teacher.html" class="nav-link">
-                                   <i class="fas fa-user-tie"></i>
-                                   <span class="link-name">Teachers</span>
-                              </a>
-                              <span class="tooltip">Teachers</span>
-                         </li>
-                         <li class="nav-item">
-                              <a href="#" class="nav-link">
-                                   <i class="fa-solid fa-message"></i>
-                                   <span class="link-name">Message</span>
-                              </a>
-                              <span class="tooltip">Message</span>
-                         </li>
-                         <li class="nav-item">
-                              <a href="#" class="nav-link">
-                                   <i class="fa-solid fa-chart-pie"></i>
-                                   <span class="link-name">Analytics</span>
-                              </a>
-                              <span class="tooltip">Analytics</span>
-                         </li>
-                         <li class="nav-item">
-                              <a href="#" class="nav-link">
-                                   <i class="fa-solid fa-folder"></i>
-                                   <span class="link-name">File Manager</span>
-                              </a>
-                              <span class="tooltip">File Manager</span>
-                         </li>
-                         <li class="nav-item">
-                              <a href="#" class="nav-link">
-                                   <i class="fa-solid fa-cart-shopping"></i>
-                                   <span class="link-name">Order</span>
-                              </a>
-                              <span class="tooltip">Order</span>
-                         </li>
-                         <li class="nav-item">
-                              <a href="#" class="nav-link">
-                                   <i class="fa-solid fa-heart"></i>
-                                   <span class="link-name">Save</span>
-                              </a>
-                              <span class="tooltip">Save</span>
-                         </li>
-                         <li class="nav-item">
-                              <a href="#" class="nav-link">
-                                   <i class="fas fa-cog"></i>
-                                   <span class="link-name">Settings</span>
-                              </a>
-                              <span class="tooltip">Settings</span>
-                         </li>
-                    </ul>
-               </div>
-          </nav>
-
-          <main class="main">
-               <div class="main-header">
-                    <div class="main-top-label">
-                         <div class="sub-01">
-                              <span class="fas fa-search search"></span>
-                              <input type="search" placeholder="Search here...." id="search-box">
-                         </div>
-                         <div class="sub-02">
-                              <span class="fa-solid fa-bell bell fa-beat"></span>
-                              <div id="user-status">
-                                   <div class="toggler">
-                                        <input type="checkbox" id="checkbox">
-                                   </div>
-                                   <div class="user-status">
-                                        <i class="far fa-user"></i>
-                                   </div>
-                              </div>
-                         </div>
-                    </div>
-               </div>
-               <div class="container" id="teacher-container">
-                    <div class="main-teacher-container">
-                         <div class="teacher-card">
-                              <img class="card-img skeleton">
-                              <div class="t-card-body">
-                                   <h3 class="t-card-title skeleton"></h3>
-                                   <p class="t-card-text skeleton"></p>
-                              </div>
-                         </div>
-                         <div class="teacher-card">
-                              <img class="card-img skeleton">
-                              <div class="t-card-body">
-                                   <h3 class="t-card-title skeleton"></h3>
-                                   <p class="t-card-text skeleton"></p>
-                              </div>
-                         </div>
-                         <div class="teacher-card">
-                              <img class="card-img skeleton">
-                              <div class="t-card-body">
-                                   <h3 class="t-card-title skeleton"></h3>
-                                   <p class="t-card-text skeleton"></p>
-                              </div>
-                         </div>
-                         <div class="teacher-card">
-                              <img class="card-img skeleton">
-                              <div class="t-card-body">
-                                   <h3 class="t-card-title skeleton"></h3>
-                                   <p class="t-card-text skeleton"></p>
-                              </div>
-                         </div>
-                         <div class="teacher-card">
-                              <img class="card-img skeleton">
-                              <div class="t-card-body">
-                                   <h3 class="t-card-title skeleton"></h3>
-                                   <p class="t-card-text skeleton"></p>
-                              </div>
-                         </div>
-                         <div class="teacher-card">
-                              <img class="card-img skeleton">
-                              <div class="t-card-body">
-                                   <h3 class="t-card-title skeleton"></h3>
-                                   <p class="t-card-text skeleton"></p>
-                              </div>
-                         </div>
-                         <div class="teacher-card">
-                              <img class="card-img skeleton">
-                              <div class="t-card-body">
-                                   <h3 class="t-card-title skeleton"></h3>
-                                   <p class="t-card-text skeleton"></p>
-                              </div>
-                         </div>
-                         <div class="teacher-card">
-                              <img class="card-img skeleton">
-                              <div class="t-card-body">
-                                   <h3 class="t-card-title skeleton"></h3>
-                                   <p class="t-card-text skeleton"></p>
-                              </div>
-                         </div>
-                    </div>
-               </div>
-          </main>
-     </div>
-     <script src="./js/plugins.js"></script>
-     <script src="./js/index.js"></script>
-     <script type="module" src="./js/teacher.js"></script>
-</body>
-
+			<main class="main">
+				<div class="main-header">
+					<div class="main-top-label">
+						<div class="sub-01">
+							<span class="fas fa-search search"></span>
+							<input
+								type="search"
+								placeholder="Search here...."
+								id="search-box"
+							/>
+						</div>
+						<div class="sub-02">
+							<span class="fa-solid fa-bell bell fa-beat"></span>
+							<div id="user-status">
+								<div class="toggler">
+									<input type="checkbox" id="checkbox" />
+								</div>
+								<div class="user-status">
+									<i class="far fa-user"></i>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="container" id="teacher-container">
+					<div class="main-teacher-container">
+						<div class="teacher-card">
+							<img class="card-img skeleton" />
+							<div class="t-card-body">
+								<h3 class="t-card-title skeleton"></h3>
+								<p class="t-card-text skeleton"></p>
+							</div>
+						</div>
+						<div class="teacher-card">
+							<img class="card-img skeleton" />
+							<div class="t-card-body">
+								<h3 class="t-card-title skeleton"></h3>
+								<p class="t-card-text skeleton"></p>
+							</div>
+						</div>
+						<div class="teacher-card">
+							<img class="card-img skeleton" />
+							<div class="t-card-body">
+								<h3 class="t-card-title skeleton"></h3>
+								<p class="t-card-text skeleton"></p>
+							</div>
+						</div>
+						<div class="teacher-card">
+							<img class="card-img skeleton" />
+							<div class="t-card-body">
+								<h3 class="t-card-title skeleton"></h3>
+								<p class="t-card-text skeleton"></p>
+							</div>
+						</div>
+						<div class="teacher-card">
+							<img class="card-img skeleton" />
+							<div class="t-card-body">
+								<h3 class="t-card-title skeleton"></h3>
+								<p class="t-card-text skeleton"></p>
+							</div>
+						</div>
+						<div class="teacher-card">
+							<img class="card-img skeleton" />
+							<div class="t-card-body">
+								<h3 class="t-card-title skeleton"></h3>
+								<p class="t-card-text skeleton"></p>
+							</div>
+						</div>
+						<div class="teacher-card">
+							<img class="card-img skeleton" />
+							<div class="t-card-body">
+								<h3 class="t-card-title skeleton"></h3>
+								<p class="t-card-text skeleton"></p>
+							</div>
+						</div>
+						<div class="teacher-card">
+							<img class="card-img skeleton" />
+							<div class="t-card-body">
+								<h3 class="t-card-title skeleton"></h3>
+								<p class="t-card-text skeleton"></p>
+							</div>
+						</div>
+					</div>
+				</div>
+			</main>
+		</div>
+		<script src="./js/plugins.js"></script>
+		<script src="./js/index.js"></script>
+		<script type="module" src="./js/teacher.js"></script>
+	</body>
 </html>
