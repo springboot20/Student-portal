@@ -9,7 +9,7 @@
   box-sizing: border-box;
   list-style: none;
   text-decoration: none;
-  outline: none;
+  /* outline: none; */
   border: none;
 }
 
@@ -526,8 +526,10 @@ input[type="checkbox"]:checked::after {
   margin-top: 1rem;
 }
 
-.main-skill-container .card .card-title {
+.main-skill-container .card h3.card-title {
+  font-size: 1.2em;
   margin-bottom: 1rem;
+  font-weight: 900;
 }
 
 .main-skill-container .card .card-icons {
@@ -781,8 +783,12 @@ input[type="checkbox"]:checked::after {
 
   .main-skill-container {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
     gap: 1rem;
+  }
+
+  .main-skill-container .card {
+    min-width: 250px;
   }
 
   .main-top-label {
