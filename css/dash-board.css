@@ -819,7 +819,7 @@ input[type="checkbox"]:checked::after {
   .main-skill-container {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-    gap: 1rem;
+    gap: 2rem;
   }
 
   .main-skill-container .card .card-icons {
