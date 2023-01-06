@@ -733,7 +733,7 @@ input[type="checkbox"]:checked::after {
   }
 
   .main-top-label {
-    gap: 13rem;
+    gap: 19rem;
   }
 
   .sub-01 input {
