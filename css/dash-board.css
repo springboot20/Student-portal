@@ -827,6 +827,6 @@ input[type="checkbox"]:checked::after {
   }
 
   .main-skill-container .card {
-    height: 235px;
+    height: 225px;
   }
 }
