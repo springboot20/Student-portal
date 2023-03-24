@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+	<meta charset="UTF-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<link rel="icon" type="image/png" sizes="32x32" href="./img/favicon-32x32.png" />
+	<script src="https://kit.fontawesome.com/643f8e5097.js" crossorigin="anonymous"></script>
+	<link rel="stylesheet" href="../fontawesome-free-6.2.1-web/css/all.min.css" />
+	<link rel="stylesheet" href="./css/styles.css">
+	<title>Student Portal</title>
+</head>
+
+<body>
+	<div id="loader-wrapper">
+		<div id="loader"></div>
+
+		<div class="loader-section section-left"></div>
+		<div class="loader-section section-right"></div>
+	</div>
+
+	<div class="website-container">
+		<!-- SIDE NAVIGATION  CONTAINER START -->
+		<nav class="side-nav">
+			<div class="nav-container">
+				<header>
+					<div class="logo-container">
+						<div class="logo">
+							<i class="fas fa-code"></i>
+							<span class="logo-name">Dashboard</span>
+						</div>
+						<i class="fa fa-angle-right show-icon"></i>
+					</div>
+				</header>
+				<!-- SIDE NAVIGATION MENUS SECTION START -->
+				<div class="menu-bar">
+					<div class="menu">
+						<ul class="nav-list" id="nav-menu">
+							<li class="nav-item">
+								<a href="dashboard.html" class="nav-link l-active">
+									<i class="fas fa-home"></i>
+									<span class="link-name">Dashboard</span>
+								</a>
+								<span class="tooltip">Dashboard</span>
+							</li>
+							<li class="nav-item">
+								<a href="profile.html" class="nav-link">
+									<i class="fas fa-user"></i>
+									<span class="link-name">User</span>
+								</a>
+								<span class="tooltip">User</span>
+							</li>
+							<li class="nav-item">
+								<a href="mentors.html" class="nav-link">
+									<i class="fa-solid fa-user-tie"></i>
+									<span class="link-name">Teachers</span>
+								</a>
+								<span class="tooltip">Teachers</span>
+							</li>
+							<li class="nav-item">
+								<a href="#" class="nav-link">
+									<i class="fa-solid fa-message"></i>
+									<span class="link-name">Message</span>
+								</a>
+								<span class="tooltip">Message</span>
+							</li>
+							<li class="nav-item">
+								<a href="#" class="nav-link">
+									<i class="fa-solid fa-chart-pie"></i>
+									<span class="link-name">Analytics</span>
+								</a>
+								<span class="tooltip">Analytics</span>
+							</li>
+							<li class="nav-item">
+								<a href="#" class="nav-link">
+									<i class="fa-solid fa-folder"></i>
+									<span class="link-name">File Manager</span>
+								</a>
+								<span class="tooltip">File Manager</span>
+							</li>
+							<li class="nav-item">
+								<a href="#" class="nav-link">
+									<i class="fa-solid fa-address-card"></i>
+									<span class="link-name">Profile</span>
+								</a>
+								<span class="tooltip">Profile</span>
+							</li>
+							<li class="nav-item">
+								<a href="#" class="nav-link">
+									<i class="fa-solid fa-heart"></i>
+									<span class="link-name">Save</span>
+								</a>
+								<span class="tooltip">Save</span>
+							</li>
+							<li class="nav-item">
+								<a href="#" class="nav-link">
+									<i class="fas fa-cog"></i>
+									<span class="link-name">Settings</span>
+								</a>
+								<span class="tooltip">Settings</span>
+							</li>
+						</ul>
+					</div>
+					<ul class="dark-mode">
+						<li class="mode">
+							<div class="moon-sun">
+								<span class="fa fa-moon icon moon"></span>
+								<span class="fa fa-sun icon sun"></span>
+							</div>
+							<span class="mode-txt txt">Light Mode</span>
+							<div class="toggle-switch">
+								<input type="checkbox" id="checkbox">
+							</div>
+						</li>
+					</ul>
+				</div>
+				<!-- SIDE NAVIGATION MENUS SECTION ENDS -->
+			</div>
+			<span class="fa fa-close close-icon"></span>
+		</nav>
+
+		<main class="main">
+			<div class="main-header">
+				<div class="main-top-label">
+					<div class="sub-01">
+						<span class="fas fa-search search"></span>
+						<input type="search" placeholder="Search here...." id="search-box" />
+					</div>
+					<div class="sub-02">
+						<span class="fa-solid fa-bell bell"></span>
+						<div class="user-status">
+							<i class="fa fa-bars menuIcon"></i>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<div class="teacher-container" id="teacher-container">
+				<div
+					class="container p-4 mt-20 mx-auto xs:max-w-screen-xs sm:max-w-screen-sm md:max-w-screen-md lg:max-w-screen-lg xl:max-w-screen-xl 2xl:max-w-screen-2xl">
+					<div class="main-teacher-container grid lg:grid-cols-2 xl:grid-cols-3 gap-6">
+						<div class="teacher-card">
+							<img src="./img/people-1.jpg" alt="mentor one" class="card-img">
+							<div class="card-body">
+								<h3 class="card-title">Dimitres Viga</h3>
+								<p class="card-text">Mathematics</p>
+							</div>
+							<div class="card-btn">
+								<a href="07086807968"><span class="fa fa-phone"></span></a>
+								<a href="www.facebook.com/${name}"><span class="fab fa-github"></span></a>
+								<a href="www.github.com/${name}"><span class="fab fa-facebook"></span></a>
+								<a href="www.linkedin.com/${name}"><span class="fab fa-linkedin"></span></a>
+							</div>
+						</div>
+						<div class="teacher-card">
+							<img src="./img/people-2.jpg" alt="mentor one" class="card-img">
+							<div class="card-body">
+								<h3 class="card-title">Tom Housenburg</h3>
+								<p class="card-text">Science</p>
+							</div>
+							<div class="card-btn">
+								<a href="07086807968"><span class="fa fa-phone"></span></a>
+								<a href="www.facebook.com/${name}"><span class="fab fa-github"></span></a>
+								<a href="www.github.com/${name}"><span class="fab fa-facebook"></span></a>
+								<a href="www.linkedin.com/${name}"><span class="fab fa-linkedin"></span></a>
+							</div>
+						</div>
+						<div class="teacher-card">
+							<img src="./img/people-3.jpg" alt="mentor one" class="card-img">
+							<div class="card-body">
+								<h3 class="card-title">Diana Benovista</h3>
+								<p class="card-text">Art</p>
+							</div>
+							<div class="card-btn">
+								<a href="07086807968"><span class="fa fa-phone"></span></a>
+								<a href="www.facebook.com/${name}"><span class="fab fa-github"></span></a>
+								<a href="www.github.com/${name}"><span class="fab fa-facebook"></span></a>
+								<a href="www.linkedin.com/${name}"><span class="fab fa-linkedin"></span></a>
+							</div>
+						</div>
+						<div class="teacher-card">
+							<img src="./img/people-4.jpg" alt="mentor one" class="card-img">
+							<div class="card-body">
+								<h3 class="card-title">Salvadore Marbeau</h3>
+								<p class="card-text">Biology</p>
+							</div>
+							<div class="card-btn">
+								<a href="07086807968"><span class="fa fa-phone"></span></a>
+								<a href="www.facebook.com/${name}"><span class="fab fa-github"></span></a>
+								<a href="www.github.com/${name}"><span class="fab fa-facebook"></span></a>
+								<a href="www.linkedin.com/${name}"><span class="fab fa-linkedin"></span></a>
+							</div>
+						</div>
+						<div class="teacher-card">
+							<img src="./img/img-01.jpg" alt="mentor one" class="card-img">
+							<div class="card-body">
+								<h3 class="card-title">Maria Historia</h3>
+								<p class="card-text">Science</p>
+							</div>
+							<div class="card-btn">
+								<a href="07086807968"><span class="fa fa-phone"></span></a>
+								<a href="www.facebook.com/${name}"><span class="fab fa-github"></span></a>
+								<a href="www.github.com/${name}"><span class="fab fa-facebook"></span></a>
+								<a href="www.linkedin.com/${name}"><span class="fab fa-linkedin"></span></a>
+							</div>
+						</div>
+						<div class="teacher-card">
+							<img src="./img/img-02.jpg" alt="mentor one" class="card-img">
+							<div class="card-body">
+								<h3 class="card-title">Jack Sally</h3>
+								<p class="card-text">Physics</p>
+							</div>
+							<div class="card-btn">
+								<a href="07086807968"><span class="fa fa-phone"></span></a>
+								<a href="www.facebook.com/${name}"><span class="fab fa-github"></span></a>
+								<a href="www.github.com/${name}"><span class="fab fa-facebook"></span></a>
+								<a href="www.linkedin.com/${name}"><span class="fab fa-linkedin"></span></a>
+							</div>
+						</div>
+						<div class="teacher-card">
+							<img src="./img/img-03.jpg" alt="mentor one" class="card-img">
+							<div class="card-body">
+								<h3 class="card-title">Mark Zugerberg</h3>
+								<p class="card-text">Python</p>
+							</div>
+							<div class="card-btn">
+								<a href="07086807968"><span class="fa fa-phone"></span></a>
+								<a href="www.facebook.com/${name}"><span class="fab fa-github"></span></a>
+								<a href="www.github.com/${name}"><span class="fab fa-facebook"></span></a>
+								<a href="www.linkedin.com/${name}"><span class="fab fa-linkedin"></span></a>
+							</div>
+						</div>
+						<div class="teacher-card">
+							<img src="./img/img-04.jpg" alt="mentor one" class="card-img">
+							<div class="card-body">
+								<h3 class="card-title">Net Ninja</h3>
+								<p class="card-text">Node Js</p>
+							</div>
+							<div class="card-btn">
+								<a href="07086807968"><span class="fa fa-phone"></span></a>
+								<a href="www.facebook.com/${name}"><span class="fab fa-github"></span></a>
+								<a href="www.github.com/${name}"><span class="fab fa-facebook"></span></a>
+								<a href="www.linkedin.com/${name}"><span class="fab fa-linkedin"></span></a>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</main>
+	</div>
+	<script src="./js/teacher.js"></script>
+</body>
+
+</html>
