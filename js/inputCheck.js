@@ -44,8 +44,7 @@ const handleInputCheck = (
  */
 
 function checkUsername(userInput, uField) {
-  let pattern = /^[a-z0-9_+.]+$/;
-  if (!userInput.value.match(pattern)) {
+  if (userInput.value.length < 8) {
     uField.classList.add("error");
     uField.classList.remove("valid");
   } else {
