@@ -1,5 +1,14 @@
-import { getUsers } from './LocalStore.js';
-import { showErrorMessage } from './msg.js'
+let userDetails = [];
+
+const getPrevDetails = () => {
+	if (localStorage.getItem("users-details")) {
+		userDetails = JSON.parse(localStorage.getItem("users-details"));
+	}
+}
+
+addEventListener("load", () => {
+	getPrevDetails();
+})
 
 const email = document.getElementById('email');
 const passWord = document.getElementById('password');
@@ -11,54 +20,55 @@ const successAlert = document.querySelector('.notification-message');
 const errorAlert = document.querySelector('.error-notification-message');
 const form = document.querySelector('form');
 
-const users = getUsers();
-let emailExist = users.some((user) => (user.userEmail === email));
-let passExist = users.some((user) => (user.userPassword === pass));
-console.log(users)
+
 form.addEventListener('submit', (e) => {
 	e.preventDefault();
 
-	(email.value === '') ? eField.classList.add('shake', 'error') : checkEmail(emailExist, eField);
-	(passWord.value === '') ? pField.classList.add('shake', 'error') : checkPassword(passExist, pField);
 
-	if (emailExist && passExist) {
-		errorAlert.classList.add('active');
-		successAlert.classList.add('active');
-		setTimeout(() => location.href = form.getAttribute('action'), 2500);
-	} else {
-		showErrorMessage('User details does not exist', 'danger', 'fa-circle-exclamation');
-		errorAlert.classList.add('active');
+	if (email.value === '') eField.classList.add('shake', 'error');
+	if (passWord.value === '') pField.classList.add('shake', 'error');
+
+	let emailValue = email.value;
+	let passwordValue = passWord.value;
+
+	let _isFound = false;
+	userDetails = JSON.parse(localStorage.getItem("users-details"));
+
+	console.log(userDetails);
+
+	for (let ind = 0; ind < userDetails.length; ind++) {
+		let eExist = userDetails[ind].email === emailValue;
+		let pExist = userDetails[ind].password === passwordValue;
+
+		if (eExist && pExist) {
+			_isFound = true;
+			localStorage.setItem("user-index", JSON.stringify(ind));
+			console.log(localStorage.getItem("user-index"));
+		}
 	}
 
-	localStorage.setItem('user-logins', JSON.stringify(users));
+	if (_isFound === false) {
+		eField.classList.add("shake", "error");
+		pField.classList.add("shake", "error");
+	} else {
+		setTimeout(() => {
+			location.href = form.getAttribute("action");
+			email.value = '';
+			passWord.value = '';
+		}, 2000);
+
+		eField.classList.add("valid");
+		pField.classList.add("valid");
+
+		eField.classList.remove("error");
+		pField.classList.remove("error");
+	}
 
 	setTimeout(() => {
-		eField.classList.remove('shake');
-		pField.classList.remove('shake');
-	}, 600);
-	setTimeout(() => errorAlert.classList.remove('active'), 5000);
+		pField.classList.remove("shake", "error");
+		eField.classList.remove("shake", "error");
 
+		eField.classList.remove("valid");
+		pField.classList.remove("valid");
+	}, 2500)
 });
-
-email.addEventListener('keyup', () => { checkEmail(emailExist, eField) });
-passWord.addEventListener('keyup', () => { checkPassword(passExist, pField) });
-
-let checkEmail = (exist, field) => {
-	if (!exist) {
-		field.classList.add('error')
-		field.classList.remove('valid')
-	} else {
-		field.classList.add('valid')
-		field.classList.remove('error')
-	}
-}
-
-let checkPassword = (exist, field) => {
-	if (!exist) {
-		field.classList.add('error')
-		field.classList.remove('valid')
-	} else {
-		field.classList.add('valid')
-		field.classList.remove('error')
-	}
-}

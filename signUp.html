@@ -1,64 +1,83 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="image/png" sizes="32x32" href="./img/img.png" />
+    <script
+      src="https://kit.fontawesome.com/643f8e5097.js"
+      crossorigin="anonymous"
+    ></script>
+    <link
+      rel="stylesheet"
+      href="./fontawesome-free-6.2.1-web/css/all.min.css"
+    />
+    <link rel="stylesheet" href="./css/styles.css" />
+    <title>Sign In page</title>
+  </head>
 
-<head>
-	<meta charset="UTF-8">
-	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<link rel="icon" type="image/png" sizes="32x32" href="./img/img.png">
-	<script src="https://kit.fontawesome.com/643f8e5097.js" crossorigin="anonymous"></script>
-	<link rel="stylesheet" href="./css/style.css">
-	<title>Sign In page</title>
-</head>
+  <body class="bg-[#d5dfe6] grid justify-center items-center min-h-screen">
+    <div class="form-container">
+      <form action="./index.html" id="form">
+        <div class="field user">
+          <span class="fa fa-user icon"></span>
+          <input type="text" placeholder="Create your username" id="username" />
+          <span class="error error-icon fas fa-exclamation-circle"></span>
+          <span class="valid valid-icon fas fa-circle-check"></span>
+        </div>
+        <div class="field email">
+          <span class="fa fa-envelope icon"></span>
+          <input
+            type="email"
+            placeholder="Enter your a email address"
+            id="email"
+          />
+          <span class="error error-icon fas fa-exclamation-circle"></span>
+          <span class="valid valid-icon fas fa-circle-check"></span>
+        </div>
+        <div class="field password">
+          <span class="fa fa-key icon"></span>
+          <input
+            type="password"
+            placeholder="Create your password"
+            id="password"
+            autocomplete="current-password"
+          />
+          <span class="fa fa-eye pass-icon"></span>
+        </div>
+        <div class="field confirm">
+          <span class="fa fa-key icon"></span>
+          <input
+            type="password"
+            placeholder="Confirm your password"
+            id="confirmPassword"
+            autocomplete="current-password"
+          />
+          <span class="fa fa-eye cPass-icon"></span>
+        </div>
+        <p class="hint">
+          Already have an account ?
+          <a href="index.html" class="linkTo"> Log In</a>
+        </p>
+        <button type="submit" class="btn" id="signBtn">Sign Up</button>
+      </form>
+    </div>
+    <div class="notification-message">
+      <div class="notification-body">
+        <span class="fa fa-circle-check"></span>
+        <p class="notification-text">successfully signed up</p>
+      </div>
+      <span class="fa fa-close close"></span>
+    </div>
 
-<body>
-	<div class="container">
-		<form action="./dashboard.html" id="form">
-			<div class="field user ">
-				<span class="fa fa-user icon"></span>
-				<input type="text" placeholder="Create your username" id="username">
-				<span class="error error-icon fas fa-exclamation-circle"></span>
-			</div>
-			<div class="field email">
-				<span class="fa fa-envelope icon"></span>
-				<input type="email" placeholder="Enter your a email address" id="email">
-				<span class="error error-icon fas fa-exclamation-circle"></span>
-			</div>
-			<div class="field password">
-				<span class="fa fa-key icon"></span>
-				<input type="password" placeholder="Create your password" id="password" autocomplete="current-password">
-				<span class="fa fa-eye pass-icon"></span>
-			</div>
-			<div class="field confirm">
-				<span class="fa fa-key icon"></span>
-				<input type="password" placeholder="Confirm your password" id="confirmPassword" autocomplete="current-password">
-				<span class="fa fa-eye cPass-icon"></span>
-			</div>
-			<p class="hint">
-				Already have an account ?
-				<a href="index.html" class="linkTo"> Log In</a>
-			</p>
-			<button type="submit" id="signBtn">Sign Up</button>
-		</form>
-	</div>
-	<div class="notification-message">
-		<span class="fa fa-circle-check"></span>
-		<div class="notification-body">
-			<h3 class="notification-title">Success</h3>
-			<p class="notification-text">You have successfully signed up</p>
-		</div>
-		<span class="fa fa-close close"></span>
-	</div>
-
-	<div class="error-notification-message">
-		<span class="fa fa-exclamation-circle"></span>
-		<div class="error-notification-body">
-			<h3 class="error-notification-title">Error</h3>
-			<p class="error-notification-text">Please fill in the inputs respectively</p>
-		</div>
-		<span class="fa fa-close"></span>
-	</div>
-	<script type="module" src="./js/signUp.js"></script>
-</body>
-
+    <div class="error-notification-message">
+      <div class="error-notification-body">
+        <span class="fa fa-exclamation-circle"></span>
+        <p class="error-notification-text">Please fill in the inputs</p>
+      </div>
+      <span class="fa fa-close"></span>
+    </div>
+    <script type="module" src="./js/signUp.js"></script>
+  </body>
 </html>
