@@ -657,7 +657,7 @@ Ensure the default browser behavior of the `hidden` attribute.
   }
 
   .side-nav .nav-container {
-    min-height: 100%;
+    height: 100%;
   }
 
   .side-nav .close-icon {
