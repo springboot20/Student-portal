@@ -1381,7 +1381,7 @@ Ensure the default browser behavior of the `hidden` attribute.
   }
 
   .form-container {
-    width: 400px;
+    width: 350px;
   }
 
   @media (min-width: 768px) {
