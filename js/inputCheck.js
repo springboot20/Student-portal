@@ -44,7 +44,7 @@ const handleInputCheck = (
  */
 
 function checkUsername(userInput, uField) {
-  if (userInput.value.length < 8) {
+  if (userInput.value.length < 7) {
     uField.classList.add("error");
     uField.classList.remove("valid");
   } else {
