@@ -1,74 +1,74 @@
 let userDetails = [];
 
 const getPrevDetails = () => {
-	if (localStorage.getItem("users-details")) {
-		userDetails = JSON.parse(localStorage.getItem("users-details"));
-	}
-}
+  if (localStorage.getItem("users-details")) {
+    userDetails = JSON.parse(localStorage.getItem("users-details"));
+  }
+};
 
 addEventListener("load", () => {
-	getPrevDetails();
-})
+  getPrevDetails();
+});
 
-const email = document.getElementById('email');
-const passWord = document.getElementById('password');
+const email = document.getElementById("email");
+const passWord = document.getElementById("password");
 
-const eField = document.querySelector('.email');
-const pField = document.querySelector('.password');
+const eField = document.querySelector(".email");
+const pField = document.querySelector(".password");
 
-const successAlert = document.querySelector('.notification-message');
-const errorAlert = document.querySelector('.error-notification-message');
-const form = document.querySelector('form');
+const successAlert = document.querySelector(".notification-message");
+const errorAlert = document.querySelector(".error-notification-message");
+const form = document.querySelector("form");
 
+form.addEventListener("submit", (e) => {
+  e.preventDefault();
 
-form.addEventListener('submit', (e) => {
-	e.preventDefault();
+  if (email.value === "") eField.classList.add("shake", "error");
+  if (passWord.value === "") pField.classList.add("shake", "error");
 
+  let emailValue = email.value;
+  let passwordValue = passWord.value;
 
-	if (email.value === '') eField.classList.add('shake', 'error');
-	if (passWord.value === '') pField.classList.add('shake', 'error');
+  let _isFound = false;
+  userDetails = JSON.parse(localStorage.getItem("users-details"));
 
-	let emailValue = email.value;
-	let passwordValue = passWord.value;
+  console.log(userDetails);
 
-	let _isFound = false;
-	userDetails = JSON.parse(localStorage.getItem("users-details"));
+  for (let ind = 0; ind < userDetails.length; ind++) {
+    let eExist = userDetails[ind].email === emailValue;
+    let pExist = userDetails[ind].password === passwordValue;
 
-	console.log(userDetails);
+    if (eExist && pExist) {
+      _isFound = true;
+      localStorage.setItem("user-index", JSON.stringify(ind));
+      console.log(localStorage.getItem("user-index"));
+    }
+  }
 
-	for (let ind = 0; ind < userDetails.length; ind++) {
-		let eExist = userDetails[ind].email === emailValue;
-		let pExist = userDetails[ind].password === passwordValue;
+  if (_isFound === false) {
+    eField.classList.add("shake", "error");
+    pField.classList.add("shake", "error");
+  } else {
+    setTimeout(() => {
+      location.href = form.getAttribute("action");
+      email.value = "";
+      passWord.value = "";
+    }, 2500);
 
-		if (eExist && pExist) {
-			_isFound = true;
-			localStorage.setItem("user-index", JSON.stringify(ind));
-			console.log(localStorage.getItem("user-index"));
-		}
-	}
+    eField.classList.add("valid");
+    pField.classList.add("valid");
 
-	if (_isFound === false) {
-		eField.classList.add("shake", "error");
-		pField.classList.add("shake", "error");
-	} else {
-		setTimeout(() => {
-			location.href = form.getAttribute("action");
-			email.value = '';
-			passWord.value = '';
-		}, 2000);
+    eField.classList.remove("error");
+    pField.classList.remove("error");
+  }
 
-		eField.classList.add("valid");
-		pField.classList.add("valid");
+  setTimeout(() => {
+    eField.classList.remove("valid");
+    pField.classList.remove("valid");
+  }, 2500);
 
-		eField.classList.remove("error");
-		pField.classList.remove("error");
-	}
-
-	setTimeout(() => {
-		pField.classList.remove("shake", "error");
-		eField.classList.remove("shake", "error");
-
-		eField.classList.remove("valid");
-		pField.classList.remove("valid");
-	}, 2500)
+  setTimeout(() => {
+    pField.classList.remove("shake");
+    eField.classList.remove("shake");
+  }, 600);
 });
