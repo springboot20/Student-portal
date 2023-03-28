@@ -625,6 +625,7 @@ video {
 
 @layer {
   body {
+    position: relative;
     --tw-bg-opacity: 1;
     background-color: rgb(236 240 243 / var(--tw-bg-opacity));
   }
