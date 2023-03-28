@@ -19,10 +19,6 @@ const pField = document.querySelector(".password");
 const closeBtn = document.querySelector(".close");
 const form = document.querySelector("form");
 
-closeBtn.addEventListener("click", function () {
-  this.parentElement.classList.remove("active");
-});
-
 form.addEventListener("submit", (e) => {
   e.preventDefault();
 
