@@ -598,6 +598,14 @@ video {
   gap: 1.5rem;
 }
 
+.overflow-hidden {
+  overflow: hidden;
+}
+
+.\!overflow-hidden {
+  overflow: hidden !important;
+}
+
 .bg-\[\#d5dfe6\] {
   --tw-bg-opacity: 1;
   background-color: rgb(213 223 230 / var(--tw-bg-opacity));
