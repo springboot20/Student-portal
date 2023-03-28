@@ -26,16 +26,7 @@ const passWord = document.getElementById("password");
 const confirmPassword = document.getElementById("confirmPassword");
 const successAlert = document.querySelector(".notification-message");
 const errorAlert = document.querySelector(".error-notification-message");
-const closeBtn = document.querySelectorAll(".close");
 const signButton = document.querySelector("#signBtn");
-
-console.log(closeBtn);
-
-closeBtn.forEach((btn) => {
-  btn.addEventListener("click", function () {
-    this.parentElement.classList.remove("active");
-  });
-});
 
 const uField = document.querySelector(".user");
 const eField = document.querySelector(".email");
@@ -69,10 +60,6 @@ const initApp = () => {
     cField.classList.remove("valid");
   }, 2500);
 
-  setTimeout(() => {
-    errorAlert.classList.remove("active");
-  }, 4500);
-
   const userLogs = {
     userName: username.value,
     email: email.value,
@@ -89,9 +76,6 @@ const initApp = () => {
     !pField.classList.contains("error") &&
     !cField.classList.contains("error")
   ) {
-    errorAlert.classList.remove("active");
-    successAlert.classList.add("active");
-
     const span = document.createElement("span");
     span.className = "loader";
     signButton.textContent = `Signing Up..........`;
@@ -105,9 +89,6 @@ const initApp = () => {
     setTimeout(() => {
       window.location.href = form.getAttribute("action");
     }, 4500);
-  } else {
-    successAlert.classList.remove("active");
-    errorAlert.classList.add("active");
   }
 };
 username.addEventListener("keyup", () => {
