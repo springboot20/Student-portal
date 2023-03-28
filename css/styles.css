@@ -557,6 +557,10 @@ video {
   visibility: visible;
 }
 
+.relative {
+  position: relative;
+}
+
 .col-span-3 {
   grid-column: span 3 / span 3;
 }
