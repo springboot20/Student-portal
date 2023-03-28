@@ -48,7 +48,10 @@ form.addEventListener("submit", (e) => {
   if (_isFound === false) {
     eField.classList.add("shake", "error");
     pField.classList.add("shake", "error");
+
+    errorAlert.classList.add("active");
   } else {
+
     setTimeout(() => {
       location.href = form.getAttribute("action");
       email.value = "";
@@ -58,6 +61,8 @@ form.addEventListener("submit", (e) => {
     eField.classList.add("valid");
     pField.classList.add("valid");
 
+    successAlert.classList.add("active");
+
     eField.classList.remove("error");
     pField.classList.remove("error");
   }
@@ -65,10 +70,12 @@ form.addEventListener("submit", (e) => {
   setTimeout(() => {
     eField.classList.remove("valid");
     pField.classList.remove("valid");
+    errorAlert.classList.remove("active");
   }, 2500);
 
   setTimeout(() => {
     pField.classList.remove("shake");
     eField.classList.remove("shake");
+
   }, 600);
 });

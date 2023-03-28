@@ -26,8 +26,16 @@ const passWord = document.getElementById("password");
 const confirmPassword = document.getElementById("confirmPassword");
 const successAlert = document.querySelector(".notification-message");
 const errorAlert = document.querySelector(".error-notification-message");
-const closeBtn = document.querySelector(".close");
-const signButton = document.querySelector('#signBtn')
+const closeBtn = document.querySelectorAll(".close");
+const signButton = document.querySelector("#signBtn");
+
+console.log(closeBtn);
+
+closeBtn.forEach((btn) => {
+  btn.addEventListener("click", function () {
+    this.parentElement.classList.remove("active");
+  });
+});
 
 const uField = document.querySelector(".user");
 const eField = document.querySelector(".email");
@@ -84,8 +92,7 @@ const initApp = () => {
     errorAlert.classList.remove("active");
     successAlert.classList.add("active");
 
-
-		const span = document.createElement("span");
+    const span = document.createElement("span");
     span.className = "loader";
     signButton.textContent = `Signing Up..........`;
     signButton.disabled = true;
