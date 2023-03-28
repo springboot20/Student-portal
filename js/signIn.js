@@ -18,7 +18,13 @@ const pField = document.querySelector(".password");
 
 const successAlert = document.querySelector(".notification-message");
 const errorAlert = document.querySelector(".error-notification-message");
+
+const closeBtn = document.querySelector(".close");
 const form = document.querySelector("form");
+
+closeBtn.addEventListener("click", function () {
+  this.parentElement.classList.remove("active");
+});
 
 form.addEventListener("submit", (e) => {
   e.preventDefault();
@@ -51,7 +57,6 @@ form.addEventListener("submit", (e) => {
 
     errorAlert.classList.add("active");
   } else {
-
     setTimeout(() => {
       location.href = form.getAttribute("action");
       email.value = "";
@@ -76,6 +81,5 @@ form.addEventListener("submit", (e) => {
   setTimeout(() => {
     pField.classList.remove("shake");
     eField.classList.remove("shake");
-
   }, 600);
 });
