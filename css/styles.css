@@ -1,5 +1,5 @@
 /*
-! tailwindcss v3.0.24 | MIT License | https://tailwindcss.com
+! tailwindcss v3.2.7 | MIT License | https://tailwindcss.com
 */
 
 /*
@@ -30,6 +30,7 @@
 2. Prevent adjustments of font size after orientation changes in iOS.
 3. Use a more readable tab size.
 4. Use the user's configured `sans` font-family by default.
+5. Use the user's configured `sans` font-feature-settings by default.
 */
 
 html {
@@ -44,6 +45,8 @@ html {
   /* 3 */
   font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
   /* 4 */
+  font-feature-settings: normal;
+  /* 5 */
 }
 
 /*
@@ -186,6 +189,8 @@ textarea {
   font-family: inherit;
   /* 1 */
   font-size: 100%;
+  /* 1 */
+  font-weight: inherit;
   /* 1 */
   line-height: inherit;
   /* 1 */
@@ -353,13 +358,6 @@ input::-moz-placeholder, textarea::-moz-placeholder {
   /* 2 */
 }
 
-input:-ms-input-placeholder, textarea:-ms-input-placeholder {
-  opacity: 1;
-  /* 1 */
-  color: #9ca3af;
-  /* 2 */
-}
-
 input::placeholder,
 textarea::placeholder {
   opacity: 1;
@@ -415,15 +413,62 @@ video {
   height: auto;
 }
 
-/*
-Ensure the default browser behavior of the `hidden` attribute.
-*/
+/* Make elements with the HTML hidden attribute stay hidden by default */
 
 [hidden] {
   display: none;
 }
 
 *, ::before, ::after {
+  --tw-border-spacing-x: 0;
+  --tw-border-spacing-y: 0;
+  --tw-translate-x: 0;
+  --tw-translate-y: 0;
+  --tw-rotate: 0;
+  --tw-skew-x: 0;
+  --tw-skew-y: 0;
+  --tw-scale-x: 1;
+  --tw-scale-y: 1;
+  --tw-pan-x:  ;
+  --tw-pan-y:  ;
+  --tw-pinch-zoom:  ;
+  --tw-scroll-snap-strictness: proximity;
+  --tw-ordinal:  ;
+  --tw-slashed-zero:  ;
+  --tw-numeric-figure:  ;
+  --tw-numeric-spacing:  ;
+  --tw-numeric-fraction:  ;
+  --tw-ring-inset:  ;
+  --tw-ring-offset-width: 0px;
+  --tw-ring-offset-color: #fff;
+  --tw-ring-color: rgb(59 130 246 / 0.5);
+  --tw-ring-offset-shadow: 0 0 #0000;
+  --tw-ring-shadow: 0 0 #0000;
+  --tw-shadow: 0 0 #0000;
+  --tw-shadow-colored: 0 0 #0000;
+  --tw-blur:  ;
+  --tw-brightness:  ;
+  --tw-contrast:  ;
+  --tw-grayscale:  ;
+  --tw-hue-rotate:  ;
+  --tw-invert:  ;
+  --tw-saturate:  ;
+  --tw-sepia:  ;
+  --tw-drop-shadow:  ;
+  --tw-backdrop-blur:  ;
+  --tw-backdrop-brightness:  ;
+  --tw-backdrop-contrast:  ;
+  --tw-backdrop-grayscale:  ;
+  --tw-backdrop-hue-rotate:  ;
+  --tw-backdrop-invert:  ;
+  --tw-backdrop-opacity:  ;
+  --tw-backdrop-saturate:  ;
+  --tw-backdrop-sepia:  ;
+}
+
+::backdrop {
+  --tw-border-spacing-x: 0;
+  --tw-border-spacing-y: 0;
   --tw-translate-x: 0;
   --tw-translate-y: 0;
   --tw-rotate: 0;
@@ -810,7 +855,8 @@ Ensure the default browser behavior of the `hidden` attribute.
     background-color: rgba(255,255,255,.3);
   }
 
-  ul.nav-list li.nav-item a.nav-link:hover i, ul.nav-list li.nav-item a.nav-link:hover span {
+  ul.nav-list li.nav-item a.nav-link:hover i,
+  ul.nav-list li.nav-item a.nav-link:hover span {
     --tw-text-opacity: 1;
     color: rgb(255 255 255 / var(--tw-text-opacity));
   }
@@ -1113,7 +1159,8 @@ Ensure the default browser behavior of the `hidden` attribute.
     gap: 1rem;
   }
 
-  .sub-02 span, .sub-02 i {
+  .sub-02 span,
+  .sub-02 i {
     font-size: 1.875rem;
     line-height: 2.25rem;
   }
@@ -1281,7 +1328,8 @@ Ensure the default browser behavior of the `hidden` attribute.
 
   /* notification styles */
 
-  .notification-message, .error-notification-message {
+  .notification-message,
+  .error-notification-message {
     position: absolute;
     top: 6rem;
     right: 1.5rem;
@@ -1309,7 +1357,8 @@ Ensure the default browser behavior of the `hidden` attribute.
   }
 
   @media (min-width: 768px) {
-    .notification-message, .error-notification-message {
+    .notification-message,
+  .error-notification-message {
       width: 400px;
     }
   }
@@ -1324,7 +1373,8 @@ Ensure the default browser behavior of the `hidden` attribute.
     width: 100%;
   }
 
-  .notification-body, .error-notification-body {
+  .notification-body,
+  .error-notification-body {
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -1339,14 +1389,16 @@ Ensure the default browser behavior of the `hidden` attribute.
     background: hsl(0, 85%, 62%);
   }
 
-  .notification-message span.fa-check, .error-notification-message span.fa-exclamation-circle {
+  .notification-message span.fa-check,
+  .error-notification-message span.fa-exclamation-circle {
     cursor: pointer;
     font-size: 1.875rem;
     line-height: 2.25rem;
     line-height: 0;
   }
 
-  .error-notification-text, .notification-text {
+  .error-notification-text,
+  .notification-text {
     white-space: nowrap;
     font-size: 1.125rem;
     line-height: 1.75rem;
@@ -1355,7 +1407,8 @@ Ensure the default browser behavior of the `hidden` attribute.
     color: rgb(107 114 128 / var(--tw-text-opacity));
   }
 
-  .error-notification-title, .notification-title {
+  .error-notification-title,
+  .notification-title {
     font-size: 1.5rem;
     line-height: 2rem;
     font-weight: 700;
@@ -1368,7 +1421,8 @@ Ensure the default browser behavior of the `hidden` attribute.
     color: rgb(76 240 114 / var(--tw-text-opacity));
   }
 
-  .notification-message span.fa-close, .error-notification-message span.fa-close {
+  .notification-message span.fa-close,
+  .error-notification-message span.fa-close {
     cursor: pointer;
     font-size: 1.5rem;
     line-height: 2rem;
@@ -1446,17 +1500,19 @@ Ensure the default browser behavior of the `hidden` attribute.
     outline-offset: 2px;
   }
 
-  form .field .valid, form .field .error {
+  form .field .valid,
+  form .field .error {
     display: none !important;
   }
 
-  form .field.shake .error, form .field.error .error, form .field.valid .valid {
+  form .field.shake .error,
+  form .field.error .error,
+  form .field.valid .valid {
     display: block !important;
   }
 
   .field.shake {
-    -webkit-animation: shake 0.2s ease-in-out;
-            animation: shake 0.2s ease-in-out;
+    animation: shake 0.2s ease-in-out;
   }
 
   form .field span {
@@ -1488,7 +1544,9 @@ Ensure the default browser behavior of the `hidden` attribute.
     color: rgb(22 163 74 / var(--tw-text-opacity));
   }
 
-  form .field span.pass-icon, form .field span.cPass-icon, form .field span.valid-icon {
+  form .field span.pass-icon,
+  form .field span.cPass-icon,
+  form .field span.valid-icon {
     right: 10px;
   }
 
@@ -1543,7 +1601,8 @@ Ensure the default browser behavior of the `hidden` attribute.
     transition-duration: 150ms;
   }
 
-  .form-container button.btn:disabled, .form-container button.btn:disabled:hover {
+  .form-container button.btn:disabled,
+  .form-container button.btn:disabled:hover {
     cursor: text;
     border-width: 2px;
     --tw-border-opacity: 1;
@@ -1565,12 +1624,6 @@ Ensure the default browser behavior of the `hidden` attribute.
   }
 
   ::-moz-placeholder {
-    font-size: 1.15em;
-    --tw-text-opacity: 1;
-    color: rgb(107 114 128 / var(--tw-text-opacity));
-  }
-
-  :-ms-input-placeholder {
     font-size: 1.15em;
     --tw-text-opacity: 1;
     color: rgb(107 114 128 / var(--tw-text-opacity));
@@ -1599,30 +1652,12 @@ Ensure the default browser behavior of the `hidden` attribute.
   form p a:hover {
     --tw-text-opacity: 1;
     color: rgb(49 39 211 / var(--tw-text-opacity));
-    -webkit-text-decoration-line: underline !important;
-            text-decoration-line: underline !important;
+    text-decoration-line: underline !important;
   }
 
   form p a:active {
     --tw-text-opacity: 1;
     color: rgb(247 88 66 / var(--tw-text-opacity));
-  }
-
-  @-webkit-keyframes shake {
-    0%,
-    100% {
-      margin-left: 0px;
-    }
-
-    20%,
-    80% {
-      margin-left: -12px;
-    }
-
-    40%,
-    60% {
-      margin-left: 12px;
-    }
   }
 
   @keyframes shake {
