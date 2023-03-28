@@ -566,6 +566,10 @@ video {
   margin-right: auto;
 }
 
+.\!mt-24 {
+  margin-top: 6rem !important;
+}
+
 .mt-20 {
   margin-top: 5rem;
 }
@@ -576,6 +580,10 @@ video {
 
 .min-h-screen {
   min-height: 100vh;
+}
+
+.max-w-screen-xs {
+  max-width: 480px;
 }
 
 .items-center {
@@ -597,6 +605,10 @@ video {
 
 .p-4 {
   padding: 1rem;
+}
+
+.p-5 {
+  padding: 1.25rem;
 }
 
 @layer {
@@ -1496,7 +1508,7 @@ video {
 
   form .field.shake input,
   form .field.error input:focus {
-    box-shadow: 0 0 0 0.25rem rgba(244, 16, 16, 0.407);
+    box-shadow: 0 0 0 0.25rem rgba(244, 16, 16, 0.407)!important;
     --tw-border-opacity: 1 !important;
     border-color: rgb(247 88 66 / var(--tw-border-opacity)) !important;
     --tw-bg-opacity: 1;
@@ -1509,7 +1521,7 @@ video {
 
   form .field input:focus,
   form .field.valid input {
-    box-shadow: 0 0 0 0.25rem rgba(13, 110, 253, 0.25);
+    box-shadow: 0 0 0 0.25rem rgba(13, 110, 253, 0.25)!important;
     --tw-border-opacity: 1 !important;
     border-color: rgb(134 183 254 / var(--tw-border-opacity)) !important;
     --tw-bg-opacity: 1;
@@ -1721,12 +1733,24 @@ video {
 }
 
 @media (min-width: 1024px) {
+  .lg\:flex {
+    display: flex;
+  }
+
   .lg\:max-w-screen-lg {
     max-width: 1024px;
   }
 
   .lg\:grid-cols-2 {
     grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .lg\:flex-row {
+    flex-direction: row;
+  }
+
+  .lg\:\!gap-4 {
+    gap: 1rem !important;
   }
 }
 
