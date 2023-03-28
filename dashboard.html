@@ -1,236 +1,258 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./img/favicon-32x32.png"
+    />
+    <script
+      src="https://kit.fontawesome.com/643f8e5097.js"
+      crossorigin="anonymous"
+    ></script>
+    <link rel="stylesheet" href="./css/styles.css" />
+    <title>Student Portal</title>
+  </head>
 
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="icon" type="image/png" sizes="32x32" href="./img/favicon-32x32.png">
-  <script src="https://kit.fontawesome.com/643f8e5097.js" crossorigin="anonymous"></script>
-  <link rel="stylesheet" href="./css/styles.css">
-  <!-- Scripts links -->
-  <script defer src="./js/plugins.js"></script>
-  <title>Student Portal</title>
-</head>
+  <body>
+    <div id="loader-wrapper">
+      <div id="loader"></div>
 
-<body>
-  <div id="loader-wrapper">
-    <div id="loader"></div>
+      <div class="loader-section section-left"></div>
+      <div class="loader-section section-right"></div>
+    </div>
 
-    <div class="loader-section section-left"></div>
-    <div class="loader-section section-right"></div>
-
-  </div>
-
-  <!-- WEBSITE SKELETON SECTION START -->
-  <div class="website-container">
-
-    <!-- SIDE NAVIGATION  CONTAINER START -->
-    <nav class="side-nav">
-      <div class="nav-container">
-        <header>
-          <div class="logo-container">
-            <div class="logo">
-              <i class="fas fa-code"></i>
-              <span class="logo-name">Dashboard</span>
+    <!-- WEBSITE SKELETON SECTION START -->
+    <div class="website-container">
+      <!-- SIDE NAVIGATION  CONTAINER START -->
+      <nav class="side-nav">
+        <div class="nav-container">
+          <header>
+            <div class="logo-container">
+              <div class="logo">
+                <i class="fas fa-code"></i>
+                <span class="logo-name">Dashboard</span>
+              </div>
+              <i class="fa fa-angle-right show-icon"></i>
             </div>
-            <i class="fa fa-angle-right show-icon"></i>
-          </div>
-        </header>
-        <!-- SIDE NAVIGATION MENUS SECTION START -->
-        <div class="menu-bar">
-          <div class="menu">
-            <ul class="nav-list" id="nav-menu">
-              <li class="nav-item">
-                <a href="dashboard.html" class="nav-link l-active">
-                  <i class="fas fa-home"></i>
-                  <span class="link-name">Dashboard</span>
-                </a>
-                <span class="tooltip">Dashboard</span>
-              </li>
-              <li class="nav-item">
-                <a href="profile.html" class="nav-link">
-                  <i class="fas fa-user"></i>
-                  <span class="link-name">User</span>
-                </a>
-                <span class="tooltip">User</span>
-              </li>
-              <li class="nav-item">
-                <a href="mentors.html" class="nav-link">
-                  <i class="fa-solid fa-user-tie"></i>
-                  <span class="link-name">Teachers</span>
-                </a>
-                <span class="tooltip">Teachers</span>
-              </li>
-              <li class="nav-item">
-                <a href="#" class="nav-link">
-                  <i class="fa-solid fa-message"></i>
-                  <span class="link-name">Message</span>
-                </a>
-                <span class="tooltip">Message</span>
-              </li>
-              <li class="nav-item">
-                <a href="#" class="nav-link">
-                  <i class="fa-solid fa-chart-pie"></i>
-                  <span class="link-name">Analytics</span>
-                </a>
-                <span class="tooltip">Analytics</span>
-              </li>
-              <li class="nav-item">
-                <a href="#" class="nav-link">
-                  <i class="fa-solid fa-address-card"></i>
-                  <span class="link-name">Profile</span>
-                </a>
-                <span class="tooltip">Profile</span>
-              </li>
-              <li class="nav-item">
-                <a href="#" class="nav-link">
-                  <i class="fa-solid fa-heart"></i>
-                  <span class="link-name">Save</span>
-                </a>
-                <span class="tooltip">Save</span>
-              </li>
-              <li class="nav-item">
-                <a href="#" class="nav-link">
-                  <i class="fas fa-cog"></i>
-                  <span class="link-name">Settings</span>
-                </a>
-                <span class="tooltip">Settings</span>
+          </header>
+          <!-- SIDE NAVIGATION MENUS SECTION START -->
+          <div class="menu-bar">
+            <div class="menu">
+              <ul class="nav-list" id="nav-menu">
+                <li class="nav-item">
+                  <a href="dashboard.html" class="nav-link l-active">
+                    <i class="fas fa-home"></i>
+                    <span class="link-name">Dashboard</span>
+                  </a>
+                  <span class="tooltip">Dashboard</span>
+                </li>
+                <li class="nav-item">
+                  <a href="profile.html" class="nav-link">
+                    <i class="fas fa-user"></i>
+                    <span class="link-name">User</span>
+                  </a>
+                  <span class="tooltip">User</span>
+                </li>
+                <li class="nav-item">
+                  <a href="mentors.html" class="nav-link">
+                    <i class="fa-solid fa-user-tie"></i>
+                    <span class="link-name">Teachers</span>
+                  </a>
+                  <span class="tooltip">Teachers</span>
+                </li>
+                <li class="nav-item">
+                  <a href="#" class="nav-link">
+                    <i class="fa-solid fa-message"></i>
+                    <span class="link-name">Message</span>
+                  </a>
+                  <span class="tooltip">Message</span>
+                </li>
+                <li class="nav-item">
+                  <a href="#" class="nav-link">
+                    <i class="fa-solid fa-chart-pie"></i>
+                    <span class="link-name">Analytics</span>
+                  </a>
+                  <span class="tooltip">Analytics</span>
+                </li>
+                <li class="nav-item">
+                  <a href="#" class="nav-link">
+                    <i class="fa-solid fa-address-card"></i>
+                    <span class="link-name">Profile</span>
+                  </a>
+                  <span class="tooltip">Profile</span>
+                </li>
+                <li class="nav-item">
+                  <a href="#" class="nav-link">
+                    <i class="fa-solid fa-heart"></i>
+                    <span class="link-name">Save</span>
+                  </a>
+                  <span class="tooltip">Save</span>
+                </li>
+                <li class="nav-item">
+                  <a href="#" class="nav-link">
+                    <i class="fas fa-cog"></i>
+                    <span class="link-name">Settings</span>
+                  </a>
+                  <span class="tooltip">Settings</span>
+                </li>
+              </ul>
+            </div>
+            <ul class="dark-mode">
+              <li class="mode">
+                <div class="moon-sun">
+                  <span class="fa fa-moon icon moon"></span>
+                  <span class="fa fa-sun icon sun"></span>
+                </div>
+                <span class="mode-txt txt">Light Mode</span>
+                <div class="toggle-switch">
+                  <input type="checkbox" id="checkbox" />
+                </div>
               </li>
             </ul>
           </div>
-          <ul class="dark-mode">
-            <li class="mode">
-              <div class="moon-sun">
-                <span class="fa fa-moon icon moon"></span>
-                <span class="fa fa-sun icon sun"></span>
-              </div>
-              <span class="mode-txt txt">Light Mode</span>
-              <div class="toggle-switch">
-                <input type="checkbox" id="checkbox">
-              </div>
-            </li>
-          </ul>
+          <!-- SIDE NAVIGATION MENUS SECTION ENDS -->
         </div>
-        <!-- SIDE NAVIGATION MENUS SECTION ENDS -->
-      </div>
-      <span class="fa fa-close close-icon"></span>
-    </nav>
-    <!-- SIDE NAVIGATION CONTAINER ENDS -->
+        <span class="fa fa-close close-icon"></span>
+      </nav>
+      <!-- SIDE NAVIGATION CONTAINER ENDS -->
 
-    <!-- MAIN SECTION START -->
-    <main class="main">
-      <!-- MAIN HEADER CONTAINER START -->
-      <div class="main-header">
-        <div class="main-top-label">
-          <div class="sub-01">
-            <span class="fas fa-search search"></span>
-            <input type="search" placeholder="Search here...." id="search-box">
-          </div>
+      <!-- MAIN SECTION START -->
+      <main class="main">
+        <!-- MAIN HEADER CONTAINER START -->
+        <div class="main-header">
+          <div class="main-top-label">
+            <div class="sub-01">
+              <span class="fas fa-search search"></span>
+              <input
+                type="search"
+                placeholder="Search here...."
+                id="search-box"
+              />
+            </div>
 
-          <div class="sub-02">
-            <span class="fa-solid fa-bell bell"></span>
-            <div class="user-status">
-              <i class="fa fa-bars menuIcon"></i>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <!-- MAIN HEADER CONTAINER ENDS-->
-
-      <!-- SKILL CONTAINER START -->
-
-      <div class="main-container">
-        <div
-          class="container p-4 mt-20 mx-auto xs:max-w-screen-xs sm:max-w-screen-sm md:max-w-screen-md lg:max-w-screen-lg xl:max-w-screen-xl 2xl:max-w-screen-2xl">
-          <div class="main-skill-container grid md:grid-cols-1 lg:grid-cols-2 gap-6 col-span-3">
-            <div class="card">
-              <div class="card-body">
-                <h3 class="card-title">Super Cool Project</h3>
-                <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam error animi veniam
-                  omnis fuga quam optio consequatur possimus provident vel.</p>
-                <div class="card-icons">
-                  <span class="fa fa-star"></span>
-                  <span class="fa fa-eye"></span>
-                  <span class="fa fa-share-nodes"></span>
-                </div>
-              </div>
-            </div>
-            <div class="card">
-              <div class="card-body">
-                <h3 class="card-title">Less Cool Project</h3>
-                <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam error animi veniam
-                  omnis fuga
-                  quam optio consequatur possimus provident vel.</p>
-                <div class="card-icons">
-                  <span class="fa fa-star"></span>
-                  <span class="fa fa-eye"></span>
-                  <span class="fa fa-share-nodes"></span>
-                </div>
-              </div>
-            </div>
-            <div class="card">
-              <div class="card-body">
-                <h3 class="card-title">Impossible App</h3>
-                <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam error animi veniam
-                  omnis fuga
-                  quam optio consequatur possimus provident vel.</p>
-                <div class="card-icons">
-                  <span class="fa fa-star"></span>
-                  <span class="fa fa-eye"></span>
-                  <span class="fa fa-share-nodes"></span>
-                </div>
-              </div>
-            </div>
-            <div class="card">
-              <div class="card-body">
-                <h3 class="card-title">Easy Peasy App</h3>
-                <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam error animi veniam
-                  omnis fuga
-                  quam optio consequatur possimus provident vel.</p>
-                <div class="card-icons">
-                  <span class="fa fa-star"></span>
-                  <span class="fa fa-eye"></span>
-                  <span class="fa fa-share-nodes"></span>
-                </div>
-              </div>
-            </div>
-            <div class="card">
-              <div class="card-body">
-                <h3 class="card-title">Ad Blocker</h3>
-                <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam error animi veniam
-                  omnis fuga
-                  quam optio consequatur possimus provident vel.</p>
-                <div class="card-icons">
-                  <span class="fa fa-star"></span>
-                  <span class="fa fa-eye"></span>
-                  <span class="fa fa-share-nodes"></span>
-                </div>
-              </div>
-            </div>
-            <div class="card">
-              <div class="card-body">
-                <h3 class="card-title">Money Maker</h3>
-                <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam error animi veniam
-                  omnis fuga
-                  quam optio consequatur possimus provident vel.</p>
-                <div class="card-icons">
-                  <span class="fa fa-star"></span>
-                  <span class="fa fa-eye"></span>
-                  <span class="fa fa-share-nodes"></span>
-                </div>
+            <div class="sub-02">
+              <span class="fa-solid fa-bell bell"></span>
+              <div class="user-status">
+                <i class="fa fa-bars menuIcon"></i>
               </div>
             </div>
           </div>
         </div>
-      </div>
-    </main>
-    <!-- MAIN SECTION ENDS-->
-  </div>
-  <!-- WEBSITE SKELETON SECTION ENDS-->
 
-  <script src="./js/index.js"></script>
-</body>
+        <!-- MAIN HEADER CONTAINER ENDS-->
 
+        <!-- SKILL CONTAINER START -->
+
+        <div class="main-container">
+          <div
+            class="container p-4 mt-20 mx-auto xs:max-w-screen-xs sm:max-w-screen-sm md:max-w-screen-md lg:max-w-screen-lg xl:max-w-screen-xl 2xl:max-w-screen-2xl"
+          >
+            <div
+              class="main-skill-container grid md:grid-cols-1 lg:grid-cols-2 gap-6 col-span-3"
+            >
+              <div class="card">
+                <div class="card-body">
+                  <h3 class="card-title">Super Cool Project</h3>
+                  <p class="card-text">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    Aperiam error animi veniam omnis fuga quam optio consequatur
+                    possimus provident vel.
+                  </p>
+                  <div class="card-icons">
+                    <span class="fa fa-star"></span>
+                    <span class="fa fa-eye"></span>
+                    <span class="fa fa-share-nodes"></span>
+                  </div>
+                </div>
+              </div>
+              <div class="card">
+                <div class="card-body">
+                  <h3 class="card-title">Less Cool Project</h3>
+                  <p class="card-text">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    Aperiam error animi veniam omnis fuga quam optio consequatur
+                    possimus provident vel.
+                  </p>
+                  <div class="card-icons">
+                    <span class="fa fa-star"></span>
+                    <span class="fa fa-eye"></span>
+                    <span class="fa fa-share-nodes"></span>
+                  </div>
+                </div>
+              </div>
+              <div class="card">
+                <div class="card-body">
+                  <h3 class="card-title">Impossible App</h3>
+                  <p class="card-text">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    Aperiam error animi veniam omnis fuga quam optio consequatur
+                    possimus provident vel.
+                  </p>
+                  <div class="card-icons">
+                    <span class="fa fa-star"></span>
+                    <span class="fa fa-eye"></span>
+                    <span class="fa fa-share-nodes"></span>
+                  </div>
+                </div>
+              </div>
+              <div class="card">
+                <div class="card-body">
+                  <h3 class="card-title">Easy Peasy App</h3>
+                  <p class="card-text">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    Aperiam error animi veniam omnis fuga quam optio consequatur
+                    possimus provident vel.
+                  </p>
+                  <div class="card-icons">
+                    <span class="fa fa-star"></span>
+                    <span class="fa fa-eye"></span>
+                    <span class="fa fa-share-nodes"></span>
+                  </div>
+                </div>
+              </div>
+              <div class="card">
+                <div class="card-body">
+                  <h3 class="card-title">Ad Blocker</h3>
+                  <p class="card-text">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    Aperiam error animi veniam omnis fuga quam optio consequatur
+                    possimus provident vel.
+                  </p>
+                  <div class="card-icons">
+                    <span class="fa fa-star"></span>
+                    <span class="fa fa-eye"></span>
+                    <span class="fa fa-share-nodes"></span>
+                  </div>
+                </div>
+              </div>
+              <div class="card">
+                <div class="card-body">
+                  <h3 class="card-title">Money Maker</h3>
+                  <p class="card-text">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    Aperiam error animi veniam omnis fuga quam optio consequatur
+                    possimus provident vel.
+                  </p>
+                  <div class="card-icons">
+                    <span class="fa fa-star"></span>
+                    <span class="fa fa-eye"></span>
+                    <span class="fa fa-share-nodes"></span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </main>
+      <!-- MAIN SECTION ENDS-->
+    </div>
+    <!-- WEBSITE SKELETON SECTION ENDS-->
+
+    <script src="./js/index.js"></script>
+  </body>
 </html>
