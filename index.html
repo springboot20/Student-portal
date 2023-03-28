@@ -14,38 +14,43 @@
   </head>
 
   <body
-    class="bg-[#d5dfe6] relative grid justify-center items-center min-h-screen !overflow-hidden"
+    class="bg-[#d5dfe6] relative !flex justify-center items-center min-h-screen !overflow-hidden"
   >
     <div class="form-container">
-      <form action="./dashboard.html" id="form" method="get">
-        <div class="field email">
-          <span class="fa fa-envelope icon"></span>
-          <input type="email" placeholder="Enter your email" id="email" />
-          <span class="error error-icon fas fa-exclamation-circle"></span>
-          <span class="valid valid-icon fas fa-circle-check"></span>
-        </div>
+      <div
+        class="container sm:max-w-screen-sm md:max-w-screen-md lg:max-lg: 2xl:max-w-screen-xl mx-auto"
+      >
+        <form action="./dashboard.html" id="form" method="get">
+          <div class="field email">
+            <span class="fa fa-envelope icon"></span>
+            <input type="email" placeholder="Enter your email" id="email" />
+            <span class="error error-icon fas fa-exclamation-circle"></span>
+            <span class="valid valid-icon fas fa-circle-check"></span>
+          </div>
 
-        <div class="field password">
-          <span class="fa fa-key icon"></span>
-          <input
-            class="shake"
-            type="password"
-            placeholder="Enter your password"
-            id="password"
-            autocomplete="current-password"
-          />
-          <span class="error error-icon fas fa-exclamation-circle"></span>
-          <span class="valid valid-icon fas fa-circle-check"></span>
-        </div>
-        <p class="hint">
-          Don't have an account ?
-          <a href="./signUp.html" class="linkTo" target="_blank">Sign Up</a>
-        </p>
-        <div class="form-group">
-          <button type="submit" class="btn" id="logBtn">Login</button>
-        </div>
-      </form>
+          <div class="field password">
+            <span class="fa fa-key icon"></span>
+            <input
+              class="shake"
+              type="password"
+              placeholder="Enter your password"
+              id="password"
+              autocomplete="current-password"
+            />
+            <span class="error error-icon fas fa-exclamation-circle"></span>
+            <span class="valid valid-icon fas fa-circle-check"></span>
+          </div>
+          <p class="hint">
+            Don't have an account ?
+            <a href="./signUp.html" class="linkTo" target="_blank">Sign Up</a>
+          </p>
+          <div class="form-group">
+            <button type="submit" class="btn" id="logBtn">Login</button>
+          </div>
+        </form>
+      </div>
     </div>
+
     <div class="notification-message">
       <span class="fa fa-circle-check"></span>
       <div class="notification-body">

@@ -17,49 +17,57 @@
     class="bg-[#d5dfe6] grid justify-center items-center min-h-screen relative !overflow-hidden"
   >
     <div class="form-container">
-      <form action="./index.html" id="form">
-        <div class="field user">
-          <span class="fa fa-user icon"></span>
-          <input type="text" placeholder="Create your username" id="username" />
-          <span class="error error-icon fas fa-exclamation-circle"></span>
-          <span class="valid valid-icon fas fa-circle-check"></span>
-        </div>
-        <div class="field email">
-          <span class="fa fa-envelope icon"></span>
-          <input
-            type="email"
-            placeholder="Enter your a email address"
-            id="email"
-          />
-          <span class="error error-icon fas fa-exclamation-circle"></span>
-          <span class="valid valid-icon fas fa-circle-check"></span>
-        </div>
-        <div class="field password">
-          <span class="fa fa-key icon"></span>
-          <input
-            type="password"
-            placeholder="Create your password"
-            id="password"
-            autocomplete="current-password"
-          />
-          <span class="fa fa-eye pass-icon"></span>
-        </div>
-        <div class="field confirm">
-          <span class="fa fa-key icon"></span>
-          <input
-            type="password"
-            placeholder="Confirm your password"
-            id="confirmPassword"
-            autocomplete="current-password"
-          />
-          <span class="fa fa-eye cPass-icon"></span>
-        </div>
-        <p class="hint">
-          Already have an account ?
-          <a href="index.html" class="linkTo"> Log In</a>
-        </p>
-        <button type="submit" class="btn" id="signBtn">Sign Up</button>
-      </form>
+      <div
+        class="container sm:max-w-screen-sm md:max-w-screen-md lg:max-lg: 2xl:max-w-screen-xl mx-auto"
+      >
+        <form action="./index.html" id="form">
+          <div class="field user">
+            <span class="fa fa-user icon"></span>
+            <input
+              type="text"
+              placeholder="Create your username"
+              id="username"
+            />
+            <span class="error error-icon fas fa-exclamation-circle"></span>
+            <span class="valid valid-icon fas fa-circle-check"></span>
+          </div>
+          <div class="field email">
+            <span class="fa fa-envelope icon"></span>
+            <input
+              type="email"
+              placeholder="Enter your a email address"
+              id="email"
+            />
+            <span class="error error-icon fas fa-exclamation-circle"></span>
+            <span class="valid valid-icon fas fa-circle-check"></span>
+          </div>
+          <div class="field password">
+            <span class="fa fa-key icon"></span>
+            <input
+              type="password"
+              placeholder="Create your password"
+              id="password"
+              autocomplete="current-password"
+            />
+            <span class="fa fa-eye pass-icon"></span>
+          </div>
+          <div class="field confirm">
+            <span class="fa fa-key icon"></span>
+            <input
+              type="password"
+              placeholder="Confirm your password"
+              id="confirmPassword"
+              autocomplete="current-password"
+            />
+            <span class="fa fa-eye cPass-icon"></span>
+          </div>
+          <p class="hint">
+            Already have an account ?
+            <a href="index.html" class="linkTo"> Log In</a>
+          </p>
+          <button type="submit" class="btn" id="signBtn">Sign Up</button>
+        </form>
+      </div>
     </div>
     <div class="notification-message">
       <div class="notification-body">
