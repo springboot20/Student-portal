@@ -17,7 +17,7 @@
   let sunIcon = doc.querySelector(".sun");
 
   if (mode !== null && mode === dark) {
-    toggle.setAttribute("checked", true);
+    toggle.checked = true;
     modeText.textContent = "Dark mode";
 
     moonIcon.style.opacity = "1";
@@ -51,10 +51,16 @@
     }
 
     win.matchMedia(preferTheme(dark)).addEventListener("change", (event) => {
-      if (event.matches) activateTheme(dark);
+      if (event.matches) {
+        console.log("matched");
+        activateTheme(dark);
+      }
     });
     win.matchMedia(preferTheme(light)).addEventListener("change", (event) => {
-      if (event.matches) activateTheme(light);
+      if (event.matches) {
+        console.log("matched");
+        activateTheme(light);
+      }
     });
   }
 
