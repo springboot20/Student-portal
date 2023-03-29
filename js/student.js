@@ -9,16 +9,11 @@ function search(searchIconID, searchInputID) {
 }
 
 const showMenu = () => {
-  let menuIcon = document.querySelector(".show-icon");
   let menu = document.querySelector(".side-nav");
   let icon = document.querySelector(".menuIcon");
   let closeIcon = document.querySelector(".close-icon");
 
-  if (menuIcon && menu) {
-    menuIcon.addEventListener("click", () => {
-      menu.classList.toggle("close");
-    });
-
+  if (icon && menu) {
     icon.addEventListener("click", () => {
       menu.classList.toggle("open");
     });
