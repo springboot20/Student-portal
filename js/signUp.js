@@ -26,7 +26,16 @@ const passWord = document.getElementById("password");
 const confirmPassword = document.getElementById("confirmPassword");
 const successAlert = document.querySelector(".notification-message");
 const errorAlert = document.querySelector(".error-notification-message");
+const closeBtn = document.querySelectorAll(".close");
 const signButton = document.querySelector("#signBtn");
+
+console.log(closeBtn);
+
+closeBtn.forEach((btn) => {
+  btn.addEventListener("click", function () {
+    this.parentElement.classList.remove("active");
+  });
+});
 
 const uField = document.querySelector(".user");
 const eField = document.querySelector(".email");
@@ -34,24 +43,17 @@ const pField = document.querySelector(".password");
 const cField = document.querySelector(".confirm");
 const initApp = () => {
   username.value === ""
-    ? uField.classList.add("shake", "error")
+    ? uField.classList.add("error")
     : checkUsername(username, uField);
   email.value === ""
-    ? eField.classList.add("shake", "error")
+    ? eField.classList.add("error")
     : checkEmail(email, eField);
   passWord.value === ""
-    ? pField.classList.add("shake", "error")
+    ? pField.classList.add("error")
     : checkPassLength(passWord, pField);
   confirmPassword.value === ""
-    ? cField.classList.add("shake", "error")
+    ? cField.classList.add("error")
     : confirmPass(passWord, confirmPassword, cField);
-
-  setTimeout(() => {
-    uField.classList.remove("shake");
-    eField.classList.remove("shake");
-    pField.classList.remove("shake");
-    cField.classList.remove("shake");
-  }, 600);
 
   setTimeout(() => {
     uField.classList.remove("valid");
@@ -59,6 +61,10 @@ const initApp = () => {
     pField.classList.remove("valid");
     cField.classList.remove("valid");
   }, 2500);
+
+  setTimeout(() => {
+    errorAlert.classList.remove("active");
+  }, 4500);
 
   const userLogs = {
     userName: username.value,
@@ -76,6 +82,9 @@ const initApp = () => {
     !pField.classList.contains("error") &&
     !cField.classList.contains("error")
   ) {
+    errorAlert.classList.remove("active");
+    successAlert.classList.add("active");
+
     const span = document.createElement("span");
     span.className = "loader";
     signButton.textContent = `Signing Up..........`;
@@ -89,6 +98,9 @@ const initApp = () => {
     setTimeout(() => {
       window.location.href = form.getAttribute("action");
     }, 4500);
+  } else {
+    successAlert.classList.remove("active");
+    errorAlert.classList.add("active");
   }
 };
 username.addEventListener("keyup", () => {

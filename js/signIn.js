@@ -16,14 +16,21 @@ const passWord = document.getElementById("password");
 const eField = document.querySelector(".email");
 const pField = document.querySelector(".password");
 
+const successAlert = document.querySelector(".notification-message");
+const errorAlert = document.querySelector(".error-notification-message");
+
 const closeBtn = document.querySelector(".close");
 const form = document.querySelector("form");
+
+closeBtn.addEventListener("click", function () {
+  this.parentElement.classList.remove("active");
+});
 
 form.addEventListener("submit", (e) => {
   e.preventDefault();
 
-  if (email.value === "") eField.classList.add("shake", "error");
-  if (passWord.value === "") pField.classList.add("shake", "error");
+  if (email.value === "") eField.classList.add("error");
+  if (passWord.value === "") pField.classList.add("error");
 
   let emailValue = email.value;
   let passwordValue = passWord.value;
@@ -45,8 +52,10 @@ form.addEventListener("submit", (e) => {
   }
 
   if (_isFound === false) {
-    eField.classList.add("shake", "error");
-    pField.classList.add("shake", "error");
+    eField.classList.add("error");
+    pField.classList.add("error");
+
+    errorAlert.classList.add("active");
   } else {
     setTimeout(() => {
       location.href = form.getAttribute("action");
@@ -57,6 +66,8 @@ form.addEventListener("submit", (e) => {
     eField.classList.add("valid");
     pField.classList.add("valid");
 
+    successAlert.classList.add("active");
+
     eField.classList.remove("error");
     pField.classList.remove("error");
   }
@@ -64,10 +75,6 @@ form.addEventListener("submit", (e) => {
   setTimeout(() => {
     eField.classList.remove("valid");
     pField.classList.remove("valid");
+    errorAlert.classList.remove("active");
   }, 2500);
-
-  setTimeout(() => {
-    pField.classList.remove("shake");
-    eField.classList.remove("shake");
-  }, 600);
 });
