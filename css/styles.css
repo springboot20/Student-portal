@@ -1421,7 +1421,7 @@ video {
 
   .notification-message.active::before,
   .error-notification-message.active::before {
-    animation: animateLoad 4.5s linear forwards;
+    animation: animateLoad 2.5s linear forwards;
   }
 
   .notification-message::before,
