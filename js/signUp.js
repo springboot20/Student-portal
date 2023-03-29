@@ -60,11 +60,9 @@ const initApp = () => {
     eField.classList.remove("valid");
     pField.classList.remove("valid");
     cField.classList.remove("valid");
-  }, 2500);
-
-  setTimeout(() => {
     errorAlert.classList.remove("active");
-  }, 4500);
+    successAlert.classList.remove("active");
+  }, 2500);
 
   const userLogs = {
     userName: username.value,
