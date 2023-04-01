@@ -76,5 +76,6 @@ form.addEventListener("submit", (e) => {
     eField.classList.remove("valid");
     pField.classList.remove("valid");
     errorAlert.classList.remove("active");
+    successAlert.classList.remove("active");
   }, 2500);
 });
